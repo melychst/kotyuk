@@ -15,8 +15,7 @@ img {
 }
 header {
 	.navigation {
-		background-color: #ed928e;
-		opacity: 0.5;
+		background-color:rgba(237,146,142, 0.5);
 		padding-top: 25px;
 		padding-bottom: 25px;
 		position: absolute;
@@ -28,18 +27,25 @@ header {
 			}
 		}
 	}
-	.video-section {
-		background-image: url(../img/main-block-bg-1.jpg);
+
+	.header-section {
 		height: 700px;
 		position: relative;
 		background-size: cover;
-		padding-top: 300px;
+		padding-top: 300px;	
 		.title {
 			h1 {
 				text-align: center;
 				font-size: 50px;
 				font-family: Gravity-bold;
 			}
+		}			
+	}
+	.video-section {
+		position: relative;
+		background-size: cover;
+		video {
+			width: 100%;
 		}
 	}	
 }
@@ -48,20 +54,24 @@ nav {
 	ul {
 		float: right;
 		padding: 0px;
+		margin-top: 12px;
+		margin-bottom: 0px;
 		li {
 			display: inline-block;
 			a {
-			    font-size: 13px;
-			    color: #fff;
+			    font-size: 14px;
+			    color: #fff !important;
 			    letter-spacing: 0.6px;
 			    font-weight: 700;
 			    text-transform: uppercase;
 			    transition: 0.2s;	
 			    display: block;
 			    padding: 5px 15px;
+			    text-decoration: none;
 			    &:hover {
-			    	color:red;
-			    }			
+			    	color:red !important;
+			    }
+
 			}
 		}
 
@@ -73,6 +83,19 @@ nav {
 			width: 100%;
 		}
 	}
+}
+.section-title {
+	background-color: #fff;
+    width: 100%;
+    padding-top: 38px;
+    color: #4d4d4d;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 39px;
 }
 
 .link-item {
@@ -101,5 +124,81 @@ nav {
 	a {
 		color: #ed928e;
 		font-size: 18px;
+	}
+}
+
+footer {
+	padding: 50px 0px;
+	background-color: #f39b9b;
+	p {
+		color: #ffffff;
+	}
+}
+
+.social-links {
+	ul {
+		padding: 0px;
+		margin-top: 20px;
+		li {
+			display: inline-block;
+			a {
+				color : #f39b9b;
+				font-size: 24px;
+				padding: 0px 15px;
+				&:hover {
+					color:red;
+					transition: 0.2s;
+				}
+			}
+		}
+		li:nth-child(1) a {
+			padding-left: 0px;
+		}
+	}
+}
+.main-content {
+	padding: 50px 0px;
+}
+
+.contacts, .address {
+	p {
+		font-size: 16px;
+	}
+	a {
+		color : #f39b9b;
+		&:hover {
+			color:red;
+			transition: 0.2s;
+		}
+	}
+}
+
+article {
+	margin-bottom: 30px;
+	.title {
+		margin-bottom: 20px;
+		a {
+			display: block;
+		    font-weight: 700;
+		    color: #4d4d4d;
+		    font-size: 16px;
+		    line-height: 24px;
+		    transition: 0.3s;
+		    max-height: 75px;
+		    overflow: hidden;
+		    &:hover {
+		    	color: #f39b9b;
+		    }			
+		}
+	}
+	.body {
+		padding: 40px 36px 40px 38px;
+	    overflow: hidden;
+	    border: 1px solid #e5e5e5;
+	    border-top: none;
+	    color: #999999;
+	    font-size: 14px;
+	    font-weight: 400;
+	    line-height: 24px;
 	}
 }

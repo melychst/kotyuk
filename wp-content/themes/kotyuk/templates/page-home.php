@@ -170,13 +170,57 @@
 	</div>
 
 	<div id="contacts">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title">
-					<h2><?php the_field("title_contacts");?></h2>
-					
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title">
+						<h2><?php the_field("title_contacts");?></h2>
+					</div>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<?php 
+						$form = get_field("form_contact");
+						echo do_shortcode($form); 
+					?>
 				</div>
-			</div>			
-		</div>	
+				<div class="col-md-6">
+					<div class="address">
+						<?php the_field("contacts"); ?>
+
+					</div>
+					<div class="contacts">
+						<?php
+
+							if (get_field('phone')) {
+								echo '<p><i class="fa fa-phone" aria-hidden="true"></i> '.get_field('phone').'</p>';
+							}
+
+							if (get_field('e-mail')) {
+								echo '<p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href=mail:"'.get_field('e-mail').'">'.get_field('e-mail').'</a></p>';
+							}
+
+							if (get_field('skype')) {
+								echo '<p><i class="fa fa-skype" aria-hidden="true"></i> '.get_field('skype').'</p>';
+							}
+
+						?>
+					</div>
+					<div class="social-links">
+						<ul>
+							<?php 
+								$socialLinks = get_field("social_links");
+								foreach ($socialLinks as $link) {
+							
+									echo '<li><a href="'.$link['link'].'">'.$link['icon'].'</a></li>';
+	
+								}
+							?>
+						</ul>
+					</div>
+				</div>
+			</div>		
+		</div>
 	</div>	
 </div>
