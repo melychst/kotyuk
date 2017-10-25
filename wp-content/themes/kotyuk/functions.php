@@ -73,7 +73,6 @@ function register_testimonial_tax() {
 		'menu_name' => __( 'Category testimonials' ),
 	);
 
-	// Добавляем древовидную таксономию 'genre' (как категории)
 	register_taxonomy('category_testimonial', array('testimonial'), array(
 		'hierarchical' => true,
 		'labels' => $labels,
